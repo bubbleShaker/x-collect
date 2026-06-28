@@ -20,7 +20,10 @@ collect <userName>:
 
 ## 必要なもの
 
-- Node.js 18+（依存パッケージなし。`node:test` / BigInt / fetch 不要）
+- Node.js 24+（LTS Krypton。`package.json` の `engines` で下限を固定）
+  - 依存パッケージはゼロ。標準機能のみ（`node:test` / `BigInt` / `fs/promises` / `child_process`）
+  - 下限を 24 にした理由: `node --test` の安定は Node 20 以降で、開発・実行環境が現役 Active LTS の
+    Node 24 のため。"動かす環境に合わせる"＋サポート最長（〜2028年4月頃）を優先した。
 - 環境変数に TwitterAPI.io の API キー
   - `TWITTERAPI_IO_API_KEY`（公式 MCP が要求する名前）または `TWITTERAPI_API_KEY` のどちらか
   - 例: `setx TWITTERAPI_API_KEY "<key>"`（Windows・永続化）

@@ -1,0 +1,14 @@
+{
+  "name": "x-collect",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "TwitterAPI.io MCP を使い、ユーザーの新着ツイートを差分収集する CLI。取得済み ID をキャッシュして再取得(=課金)を抑える。",
+  "bin": {
+    "x-collect": "./collect.mjs"
+  },
+  "scripts": {
+    "test": "node --test",
+    "start": "node collect.mjs"
+  },
+  "license": "MIT"
+}

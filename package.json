@@ -6,6 +6,9 @@
   "bin": {
     "x-collect": "./collect.mjs"
   },
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
     "test": "node --test",
     "start": "node collect.mjs"
